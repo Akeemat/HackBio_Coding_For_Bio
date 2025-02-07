@@ -27,3 +27,11 @@ To organize the information, I created a data frame in R following each column/e
 The output showed a clear and logical structure of the team members’ information.
 
 Video tutorial: <https://www.linkedin.com/posts/akeemat-ayinla_r-hackbio-teamvaline-activity-7293757914761031680-rrGn?utm_source=share&utm_medium=member_desktop>
+
+**Team members & GitHub Links**
+
+Akeemat Ayinla: <https://github.com/Akeemat/HackBio_Coding_For_Bio/tree/main/STAGE%200>
+
+Md Asif Mahmud Aumi: <https://github.com/asifmahmudaumi/Hackbio_biocode_internship/tree/main/stage-0>
+
+Felix Idowu: <https://github.com/Holuwabiggest/Hackbio-biocoding-internship.git> 
