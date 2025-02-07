@@ -1,0 +1,12 @@
+#Create a data frame named VALINE
+VALINE <- data.frame(
+  Name = c("Akeemat Ayinla", "Md Asif Mahmud Aumi", "Felix Idowu"),
+  Slack_Username = c("Keemah", "Asif", "Felix"),
+  Email = c("akeematayinla@gmail.com", "contact.aumi@gmail.com", "idowufelix00@gmail.com"),
+  Hobby = c("Reading novels", "Travelling, Hiking", "Football, Music"),
+  Country = c("Nigeria", "Türkiye", "Nigeria"),
+  Discipline = c("Veterinary Medicine", "Agricultural Biotechnology", "Biochemistry and Molecular Biology"),
+  Programming_Language = c("R", "Python", "Python")
+)
+#View output using print
+print(VALINE)
