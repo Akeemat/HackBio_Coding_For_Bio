@@ -10,3 +10,10 @@ VALINE <- data.frame(
 )
 #View output using print
 print(VALINE)
+
+# GitHub Links for the Team Members:
+# Akeemat Ayinla: https://github.com/Akeemat/HackBio_Coding_For_Bio/tree/main/STAGE%200
+# Md Asif Mahmud Aumi: https://github.com/asifmahmudaumi/Hackbio_biocode_internship/tree/main/stage-0
+# Felix Idowu: https://github.com/Holuwabiggest/Hackbio-biocoding-internship.git
+
+# Tutorial Video: https://www.linkedin.com/posts/akeemat-ayinla_r-hackbio-teamvaline-activity-7293757914761031680-rrGn?utm_source=share&utm_medium=member_desktop
