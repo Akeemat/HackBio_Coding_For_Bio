@@ -1,0 +1,35 @@
+#Q1
+#Function for translating DNA to protein
+translate_dna <- function(dna_sequence) {
+  # Define the codons
+  codon_table <- c(
+      TTT="F", TTC="F", TTA="L", TTG="L", CTT="L", CTC="L", CTA="L", CTG="L",
+      ATT="I", ATC="I", ATA="I", ATG="M", GTT="V", GTC="V", GTA="V", GTG="V",
+      TCT="S", TCC="S", TCA="S", TCG="S", CCT="P", CCC="P", CCA="P", CCG="P",
+      ACT="T", ACC="T", ACA="T", ACG="T", GCT="A", GCC="A", GCA="A", GCG="A",
+      TAT="Y", TAC="Y", TAA="STOP", TAG="STOP", CAT="H", CAC="H", CAA="Q", CAG="Q",
+      AAT="N", AAC="N", AAA="K", AAG="K", GAT="D", GAC="D", GAA="E", GAG="E",
+      TGT="C", TGC="C", TGA="STOP", TGG="W", CGT="R", CGC="R", CGA="R", CGG="R",
+      AGT="S", AGC="S", AGA="R", AGG="R", GGT="G", GGC="G", GGA="G", GGG="G"
+    )
+  # Check if the sequence length is a multiple of 3
+  if (nchar(dna_sequence) %% 3 != 0) {
+    stop("Error: DNA sequence length is not a multiple of 3.")
+  }
+  # Split DNA sequence into codons (triplets)
+  codons <- substring(dna_sequence, seq(1, nchar(dna_sequence), 3), seq(3, nchar(dna_sequence), 3))
+  
+  # Translate codons into amino acids
+  protein <- sapply(codons, function(codon) codon_table[[codon]])
+  
+  # Stop translation at the first STOP codon
+  stop_index <- which(protein == "STOP")
+  if (length(stop_index) > 0) {
+    protein <- protein[1:(stop_index[1] - 1)]
+  }
+  
+  return(paste(protein, collapse = ""))
+}
+DNA1 <- "AGCCCTTTTTGA"  
+protein1 <- translate_dna(DNA1)
+print(protein1)  
