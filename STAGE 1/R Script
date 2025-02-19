@@ -1,4 +1,4 @@
-#Q1
+###Q1
 #Function for translating DNA to protein
 translate_dna <- function(dna_sequence) {
   # Define the codons
@@ -30,6 +30,58 @@ translate_dna <- function(dna_sequence) {
   
   return(paste(protein, collapse = ""))
 }
-DNA1 <- "AGCCCTTTTTGA"  
+#Trial
+DNA1 <- "AGCCCTTTTTGA"
 protein1 <- translate_dna(DNA1)
-print(protein1)  
+print(protein1) #should return "SPF"
+
+###Q2
+#Writing a function that simulates and generates a logistic population growth curve
+Logexp <- function(k,x0,x) {
+  value <- (1/(1+exp(-k*(x-x0)))) #inputting formular for logistic expression
+  return(value)
+  }
+#trial
+Logexp(0.5,5,1) #Should return "0.1192029"
+
+#Creating a dataset and plot
+Logexp <- function(k,x0,x) {
+  value <- (1/(1+exp(-k*(x-x0)))) #inputting formular for logistic expression
+  return(value)
+}
+# Initialize an empty vector to store results
+Population <- c()
+
+# Loop from 0 to 24 and compute Logexp values
+for(i in 0:24){
+  curr_pop <- Logexp(k = 0.25, x0 = 5, x = i)
+  Population <- c(Population, curr_pop) # Append the new value to correctly add new values to the vector.
+}
+
+# Print or plot the results
+print(Population)
+
+plot(x = 0:24, y = Population)
+
+#Changing the values of K and x0 change the sigmoid curve
+
+###Q3
+#Write a function for calculating hamming distance
+hamming_distance <- function(string1, string2) {
+  # Check if sequences are of equal length
+  if (nchar(string1) != nchar(string2)) {
+    stop("Sequences must be of equal length")
+  }
+
+  # Convert strings to character vectors
+  string1_chars <- strsplit(string1, "")[[1]]
+  string2_chars <- strsplit(string2, "")[[1]]
+  
+  # Count positions where characters differ
+  distance <- sum(string1_chars != string2_chars)
+  
+  return(distance)
+}
+#Trial
+hamming_distance("ACTGCA","GCTCCA") #should return 2
+ 
