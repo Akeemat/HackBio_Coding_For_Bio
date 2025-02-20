@@ -65,6 +65,15 @@ plot(x = 0:24, y = Population)
 
 #Changing the values of K and x0 change the sigmoid curve
 
+## Function to find the time to reach 80% of the maximum growth
+time_to_80_percent <- function(k, x0) {
+  # Calculate the time when the logistic function reaches 80% of the max growth
+  time_80 <- x0 - (log(0.25) / k)
+  return(time_80)
+}
+#trial
+time_to_80_percent(0.25,5) #should return "10.54518"
+
 ###Q3
 #Write a function for calculating hamming distance
 hamming_distance <- function(string1, string2) {
